@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'rest-client'
+
+
+if !ARGV[3]
+  puts "discourse-settings-uploader HOSTNAME API_KEY API_USERNAME SETTINGS_FILE"
+  exit
+end
+
+SITE=ARGV[0]
+API_KEY=ARGV[1]
+API_USERNAME=ARGV[2]
+SETTINGS=ARGV[3]
+
+def psetting(setting)
+  puts "#{setting['category']}/#{setting['setting']} : #{setting['value']}"
+end
+def jsetting(setting)
+  url = "http://#{SITE}/admin/site_settings/#{setting['setting']}"
+  value = setting['setting']
+  my_hash = {value => setting['value']}
+  my_hash[:api_key] = API_KEY
+  my_hash[:api_username] = API_USERNAME
+  psetting(setting)
+  begin
+    r = RestClient.put(url, my_hash)
+  rescue
+    puts "something's wrong"
+  end
+end
+
+settings_raw = File.read(SETTINGS)
+settings = JSON.parse(settings_raw)
+settings['site_settings'].each do |setting|
+  jsetting (setting) unless setting['value'] == setting['default']
+end
