@@ -20,6 +20,8 @@ For example:
 
 ### Warning
 
-This script does minimal error checking and could destroy your site, cause fires, or hurt people.
+This script does no error checking and could destroy your site, cause fires, or hurt people.
 
 You should make a backup of your site before you use this script.
+
+You can, at your own peril, edit the JSON file before running the script, but note that no error checking is done, so you should make a backup of the original settings file too.
