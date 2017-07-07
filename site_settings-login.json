@@ -1,0 +1,165 @@
+{
+  "site_settings": [
+    {
+      "setting": "enable_sso",
+      "description": "Enable single sign on via an external site (WARNING: USERS' EMAIL ADDRESSES *MUST* BE VALIDATED BY THE EXTERNAL SITE!)",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_allows_all_return_paths",
+      "description": "Do not restrict the domain for return_paths provided by SSO (by default return path must be on current site)",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "enable_sso_provider",
+      "description": "Implement Discourse SSO provider protocol at the /session/sso_provider endpoint, requires sso_secret to be set",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "verbose_sso_logging",
+      "description": "Log verbose SSO related diagnostics to /logs",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_url",
+      "description": "URL of single sign on endpoint (must include http:// or https://)",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_secret",
+      "description": "Secret string used to cryptographically authenticate SSO information, be sure it is 10 characters or longer",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_overrides_bio",
+      "description": "Overrides user bio in user profile and prevents user from changing it",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_overrides_email",
+      "description": "Overrides local email with external site email from SSO payload on every login, and prevent local changes. (WARNING: discrepancies can occur due to normalization of local emails)",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_overrides_username",
+      "description": "Overrides local username with external site username from SSO payload on every login, and prevent local changes. (WARNING: discrepancies can occur due to differences in username length/requirements)",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_overrides_name",
+      "description": "Overrides local full name with external site full name from SSO payload on every login, and prevent local changes.",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_overrides_avatar",
+      "description": "Overrides user avatar with external site avatar from SSO payload. If enabled, disabling allow_uploaded_avatars is highly recommended",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "sso_not_approved_url",
+      "description": "Redirect unapproved SSO accounts to this URL",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "email_domains_blacklist",
+      "description": "A pipe-delimited list of email domains that users are not allowed to register accounts with. Example: mailinator.com|trashmail.net",
+      "default": "mailinator.com",
+      "type": "list",
+      "value": "mailinator.com",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "email_domains_whitelist",
+      "description": "A pipe-delimited list of email domains that users MUST register accounts with. WARNING: Users with email domains other than those listed will not be allowed!",
+      "default": "",
+      "type": "list",
+      "value": "",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "forgot_password_strict",
+      "description": "Don't inform users of an account's existence when they use the forgot password dialog.",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "log_out_strict",
+      "description": "When logging out, log out ALL sessions for the user on all devices",
+      "default": "true",
+      "type": "bool",
+      "value": "true",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "pending_users_reminder_delay",
+      "description": "Notify moderators if new users have been waiting for approval for longer than this many hours. Set to -1 to disable notifications.",
+      "default": "8",
+      "type": "integer",
+      "value": "8",
+      "category": "login",
+      "preview": null
+    },
+    {
+      "setting": "maximum_session_age",
+      "description": "User will remain logged in for n hours since last visit",
+      "default": "1440",
+      "type": "integer",
+      "value": "1440",
+      "category": "login",
+      "preview": null
+    },
+}

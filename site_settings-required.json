@@ -1,0 +1,165 @@
+{
+  "site_settings": [
+    {
+      "setting": "title",
+      "description": "The name of this site, as used in the title tag.",
+      "default": "Discourse",
+      "type": "string",
+      "value": "Discourse",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "site_description",
+      "description": "Describe this site in one sentence, as used in the meta description tag.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "contact_email",
+      "description": "Email address of key contact responsible for this site. Used for critical notifications such as unhandled flags, as well as on the /about contact form for urgent matters.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "contact_url",
+      "description": "Contact URL for this site. Used on the /about contact form for urgent matters.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "notification_email",
+      "description": "The from: email address used when sending all essential system emails. The domain specified here must have SPF, DKIM and reverse PTR records set correctly for email to arrive.",
+      "default": "noreply@unconfigured.discourse.org",
+      "type": "string",
+      "value": "noreply@unconfigured.discourse.org",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "site_contact_username",
+      "description": "A valid staff username to send all automated messages from. If left blank the default System account will be used.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "logo_url",
+      "description": "The logo image at the top left of your site, should be a wide rectangle shape. If left blank site title text will be shown.",
+      "default": "/images/d-logo-sketch.png",
+      "type": "string",
+      "value": "/images/d-logo-sketch.png",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "logo_small_url",
+      "description": "The small logo image at the top left of your site, should be a square shape, seen when scrolling down. If left blank a home glyph will be shown.",
+      "default": "/images/d-logo-sketch-small.png",
+      "type": "string",
+      "value": "/images/d-logo-sketch-small.png",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "digest_logo_url",
+      "description": "The alternate logo image used at the top of your site's email summary. Should be a wide rectangle shape. Should not be an SVG image. If left blank `logo_url` will be used.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "mobile_logo_url",
+      "description": "The fixed position logo image used at the top left of your mobile site. Should be a square shape. If left blank, `logo_url` will be used. eg: http://example.com/uploads/default/logo.png",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "favicon_url",
+      "description": "A favicon for your site, see http://en.wikipedia.org/wiki/Favicon, to work correctly over a CDN it must be a png",
+      "default": "/images/default-favicon.ico",
+      "type": "string",
+      "value": "/images/default-favicon.ico",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "apple_touch_icon_url",
+      "description": "Icon used for Apple touch devices. Recommended size is 144px by 144px.",
+      "default": "/images/default-apple-touch-icon.png",
+      "type": "string",
+      "value": "/images/default-apple-touch-icon.png",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "default_opengraph_image_url",
+      "description": "URL of the default opengraph image.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "twitter_summary_large_image_url",
+      "description": "URL of the default Twitter summary card image (should be at least 280px in width, and at least 150px in height).",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "exclude_rel_nofollow_domains",
+      "description": "A list of domains where nofollow should not be added to links. tld.com will automatically allow sub.tld.com as well. As a minimum, you should add the top-level domain of this site to help web crawlers find all content. If other parts of your website are at other domains, add those too.",
+      "default": "",
+      "type": "list",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "company_short_name",
+      "description": "Company Name (short)",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "company_full_name",
+      "description": "Company Name (full)",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+    {
+      "setting": "company_domain",
+      "description": "Company Domain",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "required",
+      "preview": null
+    },
+}

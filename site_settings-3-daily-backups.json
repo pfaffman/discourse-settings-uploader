@@ -1,0 +1,76 @@
+{
+  "site_settings": [
+    {
+      "setting": "maximum_backups",
+      "description": "The maximum amount of backups to keep on disk. Older backups are automatically deleted",
+      "default": "3",
+      "type": "integer",
+      "value": "5",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "automatic_backups_enabled",
+      "description": "Run automatic backups as defined in backup frequency",
+      "default": "true",
+      "type": "bool",
+      "value": "true",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "backup_frequency",
+      "description": "How frequently we create a site backup, in days.",
+      "default": "1",
+      "type": "integer",
+      "value": "7",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "enable_s3_backups",
+      "description": "Upload backups to S3 when complete. IMPORTANT: requires valid S3 credentials entered in Files settings.",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "s3_backup_bucket",
+      "description": "The remote bucket to hold backups. WARNING: Make sure it is a private bucket.",
+      "default": "",
+      "type": "string",
+      "value": "",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "s3_disable_cleanup",
+      "description": "Disable the removal of backups from S3 when removed locally.",
+      "default": "false",
+      "type": "bool",
+      "value": "false",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "backup_time_of_day",
+      "description": "Time of day UTC when the backup should occur.",
+      "default": "3:30",
+      "type": "string",
+      "value": "7:30",
+      "category": "backups",
+      "preview": null
+    },
+    {
+      "setting": "backup_with_uploads",
+      "description": "Include uploads in scheduled backups. Disabling this will only backup the database.",
+      "default": "true",
+      "type": "bool",
+      "value": "true",
+      "category": "backups",
+      "preview": null
+    },
+  ],
+}
