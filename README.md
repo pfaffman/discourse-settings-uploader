@@ -25,3 +25,15 @@ This script does no error checking and could destroy your site, cause fires, or 
 You should make a backup of your site before you use this script.
 
 You can, at your own peril, edit the JSON file before running the script, but note that no error checking is done, so you should make a backup of the original settings file too.
+
+### Making your Downloaded JSON File readable
+
+You can pretty-print your downloaded JSON file like this
+
+    jq . site_settings.json > pretty_settings.json
+
+If you need to install it in Ubuntu, you can do this:
+
+    apt-get install jq
+
+See [this site](https://stedolan.github.io/jq/download/) for instructions for installing it on other operating systems.
