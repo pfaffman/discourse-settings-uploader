@@ -4,7 +4,7 @@ require 'rest-client'
 
 
 if !ARGV[3]
-  puts "discourse-settings-uploader HOSTNAME API_KEY API_USERNAME SETTINGS_FILE"
+  puts "discourse-settings-uploader DISCOURSE_URL API_KEY API_USERNAME SETTINGS_FILE"
   exit
 end
 
@@ -14,10 +14,11 @@ API_USERNAME=ARGV[2]
 SETTINGS=ARGV[3]
 
 def psetting(setting)
-  puts "#{setting['category']}/#{setting['setting']} : #{setting['value']}"
+  #puts "#{setting['category']}/#{setting['setting']} : #{setting['value']}"
+  puts "SiteSetting#{setting['setting']}=\"#{setting['value']}\""
 end
 def jsetting(setting)
-  url = "http://#{SITE}/admin/site_settings/#{setting['setting']}"
+  url = "#{SITE}/admin/site_settings/#{setting['setting']}"
   value = setting['setting']
   my_hash = {value => setting['value']}
   my_hash[:api_key] = API_KEY
@@ -26,8 +27,10 @@ def jsetting(setting)
   begin
     r = RestClient.put(url, my_hash)
   rescue
-    puts "something's wrong"
+    puts "something's wrong with #{url} #{my_hash}"
   end
+  # API is rate limited to 60/minute. Sleep to stay under that
+  sleep 1
 end
 
 settings_raw = File.read(SETTINGS)
