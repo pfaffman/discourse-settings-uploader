@@ -12,11 +12,11 @@ Retrieve your site's API key from https://discourse.example.com/admin/api/keys
 
 Do this:
 
-   ./discourse-settings-uploader HOSTNAME API_KEY API_USER SETTINGS_FILE
+   ./discourse-settings-uploader HOSTURL API_KEY API_USER SETTINGS_FILE
 
 For example:
 
-   ./discourse-settings-uploader discourse.example.com d35989078a system site_settings.json
+   ./discourse-settings-uploader https://discourse.example.com d35989078a system site_settings.json
 
 ### Warning
 
