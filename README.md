@@ -37,3 +37,7 @@ If you need to install it in Ubuntu, you can do this:
     apt-get install jq
 
 See [this site](https://stedolan.github.io/jq/download/) for instructions for installing it on other operating systems.
+
+### Caveat
+
+The script uploads only settings that are different than the default value. This means that if there's some setting that's changed on the site you've uploaded that you want to restore to default with the script it won't work. The solution is to edit the JSON file so that the default value there doesn't match the value you want to set.
