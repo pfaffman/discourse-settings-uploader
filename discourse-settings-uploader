@@ -26,11 +26,12 @@ def jsetting(setting)
   psetting(setting)
   begin
     r = RestClient.put(url, my_hash)
-  rescue
+  rescue => e
+    puts "E! #{e}"
     puts "something's wrong with #{url} #{my_hash}"
   end
   # API is rate limited to 60/minute. Sleep to stay under that
-  sleep 1
+  sleep 1.1
 end
 
 settings_raw = File.read(SETTINGS)
