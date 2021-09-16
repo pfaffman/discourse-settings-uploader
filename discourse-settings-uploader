@@ -21,11 +21,10 @@ def jsetting(setting)
   url = "#{SITE}/admin/site_settings/#{setting['setting']}"
   value = setting['setting']
   my_hash = {value => setting['value']}
-  my_hash[:api_key] = API_KEY
-  my_hash[:api_username] = API_USERNAME
   psetting(setting)
   begin
-    r = RestClient.put(url, my_hash)
+    r = RestClient.put(url, my_hash, :'API-Username' => API_USERNAME, :'API-Key' => API_KEY)
+
   rescue => e
     puts "E! #{e}"
     puts "something's wrong with #{url} #{my_hash}"
