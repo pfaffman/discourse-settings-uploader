@@ -1,3 +1,7 @@
+# NOTE: This isn't maintained.
+
+Check https://meta.discourse.org/t/administrative-bulk-operations/118349#exportimport-8
+
 # discourse-settings-uploader
 Install a Discourse settings JSON file to a site
 
